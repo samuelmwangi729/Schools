@@ -1,0 +1,116 @@
+{% extends 'layouts/Base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="fw_al_001" class="carousel slide ps_slide_y ps_indicators_y swipe_y ps_easeOutQuint" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2500">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#fw_al_001" data-slide-to="0" class="active"></li>
+        <li data-target="#fw_al_001" data-slide-to="1"></li>
+        <li data-target="#fw_al_001" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper For Slides -->
+    <div class="carousel-inner" role="listbox">
+
+        <!-- First Slide -->
+        <div class="carousel-item active">
+
+            <!-- Slide Background -->
+            <img src="{% static 'img/car0.jpg' %}" alt="fw_al_001_01">
+
+            <!-- Slide Text Layer -->
+            <div class="fw_al_001_slide">
+                <h3 data-animation="animated fadeInUp" class="text-center">HELLO WORLD</h3>
+                <h1 data-animation="animated fadeInUp">THIS IS A  SLIDER</h1>
+                <p data-animation="animated fadeInUp">lorem 2018, ipsum out of sapien, consequa</p>
+                <a href="#" data-animation="animated fadeInUp" id="sliderbtn">iewx donecti</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+
+            <!-- Slide Background -->
+            <img src="{% static 'img/car1.jpg' %}" alt="fw_al_001_02">
+
+            <!-- Slide Text Layer -->
+            <div class="fw_al_001_slide">
+                <h3 data-animation="animated fadeInUp">wrisus 2018</h3>
+                <h1 data-animation="animated fadeInUp">dolor loborti eros</h1>
+                <p data-animation="animated fadeInUp">lorem 2018, ipsum out of sapien, consequa</p>
+                <a href="#" data-animation="animated fadeInUp">quamr rutrumt</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+
+            <!-- Slide Background -->
+            <img src="{% static 'img/car2.jpg' %}" alt="fw_al_001_02">
+
+            <!-- Slide Text Layer -->
+            <div class="fw_al_001_slide">
+                <h3 data-animation="animated fadeInUp">wx erat</h3>
+                <h1 data-animation="animated fadeInUp">Aliquamaeuhw</h1>
+                <p data-animation="animated fadeInUp">lorem 2018, ipsum out of sapien, consequa</p>
+                <a href="#" data-animation="animated fadeInUp">felis zw</a>
+            </div>
+        </div>
+        <!-- End of Slide -->
+
+    </div><!-- End of Wrapper For Slides -->
+
+</div> <!-- End Paradise Slider -->
+
+
+
+
+<!-- End -->
+<section class="highlight-phone">
+    <section id="features">
+        <div id="container" class="container-fluid">
+            <div id="row" class="row">
+                <div class="col-lg-8 offset-lg-4">
+                    <div class="ection-header wow fadeIn" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;" data-wow-duration="1s">
+                        <h1 class="text-center section-title">Core Values</h1><span class="section-divider"></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 features-img"><img src="{% static 'img/NeweKARIMA%20LOGO%202.png' %}"></div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 box wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                            <div><i class="icon fas fa-walking" id="icon"></i></div>
+                            <h4 class="title"><strong class="title" style="font-size:40px">Raising To the Bar</strong>&nbsp;<br></h4>
+                            <p class="description">A&nbsp;<strong>group</strong>&nbsp;is a collection of individuals who coordinate their individual efforts.<br></p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 box wow fadeInRight" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;" data-wow-delay="0.1s">
+                            <div><i class="icon fa fa-users" style="font-size: 98px;"></i></div>
+                            <h4 class="title"><strong class="title" style="font-size:40px">Team Spirit</strong>&nbsp;<br></h4>
+                            <p class="description">At&nbsp;<strong>team</strong>&nbsp;is a<strong>group</strong>&nbsp;of people who share a common&nbsp;<strong>team</strong>&nbsp;purpose and a number of challenging goals. Members of the<strong>team</strong>&nbsp;are mutually committed to the goals and to each other.<br></p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeInRight;">
+                            <div><i class="icon fas fa-user-graduate" style="font-size: 98px;"></i></div>
+                            <h4 class="title"><strong class="title" style="font-size:40px">Professionalism&nbsp;</strong><br></h4>
+                            <p class="description"><strong>Foreman</strong>&nbsp;is basically an instructor who provides guidelines to the operators concerning their routine tasks.<br></p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                            <div><i class="icon fa fa-sitemap" style="font-size: 98px;"></i></div>
+                            <h4 class="title"><strong class="title" style="font-size:40px">Integrity and Discipline</strong><br></h4>
+                            <p class="description"><strong>Supervisor</strong>&nbsp;is a middle line level manager whose role includes checking on the operations of the subordinates which includes that of&nbsp;<strong>foreman</strong>&nbsp;also.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<div class="profile-card">
+    <div class="profile-back"></div><img class="rounded-circle profile-pic" src="{% static 'img/2.jpg' %}">
+    <h3 class="profile-name">Lorena Norambuena Rojas</h3>
+    <p class="profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum aliquet ante, non faucibus justo pulvinar sit amet. Aliquam tempor elit ac fringilla pulvinar. Curabitur eleifend, orci ac sagittis sagittis, felis ligula convallis risus, eget scelerisque ligula velit in lorem. Etiam sit amet vestibulum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mattis tortor in est lacinia eleifend. Nam vel diam ante. Integer nec nulla pharetra, dictum massa nec, tincidunt mauris. Nunc pulvinar, ante sed ultricies consequat, felis nunc mollis felis, mollis eleifend est magna eu justo. Aenean ut egestas nibh. Phasellus hendrerit mauris tincidunt urna placerat aliquam. </p>
+</div>
+{% endblock %}

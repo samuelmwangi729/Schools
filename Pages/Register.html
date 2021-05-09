@@ -1,0 +1,64 @@
+{% extends 'layouts/Base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid text-capitalize">
+    <div class="row mh-100vh" style="background-image:url({% static 'img/183713.jpg' %});background-size:cover;">
+        <div class="col-sm-8 offset-sm-2 align-items-lg-center align-self-lg-stretch my-lg-auto my-xl-auto bg-white p-5 rounded rounded-lg-0 my-5 my-lg-0 my-box-shadow">
+            <div class="m-auto w-lg-75 w-xl-50" style="padding:47px;border:1px solid gray;">
+                <div class="row justify-content-center" style="margin-bottom:37px;">
+                    <div class="col-auto align-items-center align-content-center" style="text-align:center;">
+                        <img src="{% static 'img/NeweKARIMA%20LOGO%202.png' %}" style="width:270px">
+                    </div>
+                </div>
+                <div class="row">
+                    {% if messages %}
+                    <div class="col-sm-12">
+                       <div class="alert alert-success">
+                           {% for message in messages %}
+                                {{message}}
+                           {% endfor %}
+                       </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <form method="POST" action="{% url 'register' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="text-secondary" style="color:#0077d4 !important;">First Name</label>
+                                <input class="form-control" type="text" name="first_name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="text-secondary" style="color:#0077d4 !important;">Last Name</label>
+                                <input class="form-control" type="text" name="last_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" class="text-secondary" style="color:#0077d4 !important;">Email</label>
+                        <input class="form-control" type="text" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label data-aos="zoom-in" data-aos-delay="150" data-aos-once="true" class="text-secondary" style="color:#0077d4 !important;">Password</label>
+                        <input class="form-control" type="password" data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" required="true" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label data-aos="zoom-in" data-aos-delay="150" data-aos-once="true" class="text-secondary" style="color:#0077d4 !important;">Confirm  Password</label>
+                        <input class="form-control" type="password" data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" required="true" name="password2">
+                    </div>
+                    <div class="form-row justify-content-end">
+                        <div class="col-auto align-self-center">
+                            <button class="btn btn-info" data-bss-hover-animate="rubberBand" style="border-radius:20px;" type="submit">Register</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-right mt-3 mb-0"><a class="text-info text-info small" data-aos="fade" data-aos-delay="300" data-aos-once="true" href="#">Forgot Password?</a></p>
+                <p class="text-right mt-3 mb-0"><a class="text-info text-info small" data-aos="fade" data-aos-delay="300" data-aos-once="true" href="{% url 'login' %}">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

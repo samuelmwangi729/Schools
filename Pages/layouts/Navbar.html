@@ -1,0 +1,54 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/NeweKARIMA%20LOGO%202.png' %}" style="height:70px;width:100px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_nav" aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="mobile_nav">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right">
+        </ul>
+        <ul class="navbar-nav navbar-light">
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+            <li class="nav-item dmenu dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Academics
+                </a>
+                <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Vision</a>
+                    <a class="dropdown-item" href="#">Mission</a>
+                    <a class="dropdown-item" href="#">Core Values</a>
+                </div>
+            </li>
+            <!--========-->
+            <li class="nav-item dropdown megamenu-li dmenu">
+                <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departments</a>
+                <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3 border-right mb-4">
+                            <h6>Languages</h6>
+                            <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento Development</a>
+                            <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Magento 2 Migration</a>
+                            <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Odoo ERP</a>
+                            <a class="dropdown-item" href="#"><i class="fab fa-magento"></i> Mobile Commerce</a>
+                            <hr>
+                            <a class="dropdown-item" href="#">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="100px" height="100px" >
+                            Mr Saw and So</a>
+                        </div>
+                </div>
+            </li>
+            <!--=========-->
+            <li class="nav-item"><a class="nav-link" href="{% url 'careers'%}">Careers</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'news'%}">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact'%}">Contact us</a></li>
+           {% if user.is_authenticated %}
+           <li class="nav-item"><a class="nav-link" href="{% url 'admin'%}">My Account</a></li>
+           <li class="nav-item"><a class="nav-link" href="{% url 'logout'%}">Logout</a></li>
+           {% else %}
+           <li class="nav-item"><a class="nav-link" href="{% url 'login'%}">Student Portal</a></li>
+           {% endif%}
+        </ul>
+        </div>
+    </div>
+</nav><!-- Paradise Slider -->

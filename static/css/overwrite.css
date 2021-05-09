@@ -1,0 +1,66 @@
+.nav-link{
+    font-size:15px !important;
+    color:#0077d4 !important;
+}
+
+a.nav-link:hover{
+    color:white !important;
+    background-color:#0077d4 !important;
+    font-weight:bold;
+    transition:.3s;
+    border-radius:30px !important
+}
+a.nav-link:visited{
+    color:#0077d4 !important;
+    background-color:white !important;
+    font-weight:bold;
+    transition:.3s;
+    border-radius:30px !important
+}
+ol li.active{
+    background-color:#0077d4 !important;
+}
+
+.fw_al_001_slide > h3{
+    /* background-color:#0077d4 !important;
+    text-align-last: center !important;
+    justify-content: center !important;
+    width:fit-content;
+    display: block;
+    display: inline-block;
+    opacity:.4; */
+    font-weight:bolder;
+}
+.fw_al_001_slide{
+    background-color:#0077d4;
+    opacity:.5;
+    width: max-content;
+    position:absolute;
+    justify-content: start;
+    align-items:flex-start;
+    white-space: nowrap;
+}
+.section-title{
+    color:#0077d4 !important;
+    text-shadow: 2px 1px  red !important;
+    font-weight:bolder !important;
+    text-transform:capitalize!important;
+    text-decoration: underline !important;
+}
+.icon{
+    color:#0077d4 !important;
+    font-size:100px !important;
+    text-shadow:2px 1px red !important;
+}
+.iconc{
+    color:#0077d4 !important;
+    font-size:20px !important;
+    text-shadow:2px 1px red !important;
+}
+.title{
+    font-weight:bolder !important;
+    text-decoration: underline;
+    font-family: 'Tangerine' !important;
+    font-size:40px;
+    color:#0077d4;
+}

@@ -1,0 +1,23 @@
+{% extends 'layouts/Base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="intro">
+                <h2>Highlight</h2>
+                <p class="text-success">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. Aliqua sed justo ligula.</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="d-none d-md-block phone-mockup"><img class="device" src="{% static 'img/NeweKARIMA%20LOGO%202.png' %}" style="width:500px">
+                <div class="screen"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="container" style="padding-top: 50px;">
+<div class="alert alert-danger" role="alert" style="padding-top: 20;"><span><strong>Sorry.</strong>Thanks for your interest in working with us. There are no vaccancies as of now. Kindly keep checking with us.</span></div>
+</div>
+{% endblock %}

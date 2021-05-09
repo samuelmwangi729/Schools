@@ -1,0 +1,63 @@
+{% extends 'layouts/Base.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid jumbotron-main">
+    <div id="particles-js">
+	<canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;"></canvas>
+	</div>
+        <div class="container center-vertically-holder" style="margin-top:-20px;">
+            <div class="row center-vertically">
+                <div class="col-md-8 offset-sm-0 offset-md-2 text-center" style="margin-top:100px;margin-bottom:100px;">
+                    <h1>A template with a bit of a different <strong>look &amp; feel</strong><br><br></h1>
+                    <hr style="border-top:1px;color:rgba(255,255,255,0.9);width:60%;margin:0px;margin-top:-50px;margin-bottom:10px;margin-left:20%;">
+                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                    <p><a class="btn btn-primary" role="button" href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left" style="background-color: rgb(241,247,252);">
+                    <form>
+                        <div class="form-group">
+                            <h1 class="text-center">contact us&nbsp;</h1>
+                        </div>
+                        <div class="form-group"><input class="form-control" type="text" placeholder="Name" required="" style="width: 330px;"></div>
+                    </form>
+                    <div class="form-group"><input type="email" style="width: 330px;height: 39px;" required="" placeholder="Email"></div>
+                    <div class="form-group"><input type="tel" placeholder="Phone No" style="width: 330px;height: 38px;" required=""></div>
+                    <div class="form-group"><input type="text" placeholder="Subject" style="width: 330px;height: 38px;" required=""></div>
+                    <div class="form-group"><textarea style="width: 330px;" placeholder="Message" required=""></textarea></div>
+                    <div class="form-group"><button class="btn btn-info" type="submit" style="width: 330px;">Submit</button></div>
+                </div>
+                <div class="col-md-6" style="padding-left: 20px;padding-right: 20px;background-color: rgb(241,247,252);">
+                    <fieldset></fieldset>
+                    <legend class="text-break"><i class="iconc fas fa-university"></i>&nbsp;<strong>Karima girls High School</strong><br><br></legend>
+                    <p></p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><i class=" iconc fas fa-map-marker-alt" style="height: 24px;width: 24px;"></i></td>
+                                    <td>597,Ghandhi Nagar,Rangasamutram Post,Sathyamangalam - 638 402</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td><i class="iconc fa fa-phone" style="width: 24px;height: 24px;"></i></td>
+                                    <td>+91 98428 73007</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="iconc fa fa-envelope" style="width: 24px;height: 24px;"></i></td>
+                                    <td>kalaivaniagencieserd@gmail.com<br>kalaivanisarees@gmail.com<br><br></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+{% endblock %}
