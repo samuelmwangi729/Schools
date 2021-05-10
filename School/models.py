@@ -9,10 +9,13 @@ class SuccessfulLogins(models.Model):
     def __str__(self):
         return self.username
 class Sliders(models.Model):
+    class SliderStatus(models.IntegerChoices):
+        Active=1
+        NotActive=0
     Intro=models.CharField(max_length=1000)
     Desc=models.CharField(max_length=1000)
-    Image=models.ImageField(upload_to='Sliders')
-    Active=models.IntegerField(default=0)
+    DisplayImage=models.ImageField(upload_to='Sliders')
+    Active=models.IntegerField(choices=SliderStatus.choices,default=0)
 
     def __str__(self):
         return self.Image
@@ -22,8 +25,11 @@ class Sliders(models.Model):
         else:
             return False
 class Menus(models.Model):
+    class MenuStatus(models.IntegerChoices):
+        HasSUbMenu=1
+        HasNone=0
     Name=models.CharField(max_length=100)
-    hasSub=models.IntegerField(default=0)
+    hasSub=models.IntegerField(choices=MenuStatus.choices,default=0)
     Status=models.IntegerField(default=1)
 
     def __str__(self):

@@ -6,6 +6,8 @@ from .models import SuccessfulLogins
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 from  django.contrib.auth.models import User,auth
+from .forms import SlidersForm
+from . import models
 def Index(request):
     return render(request,'Home.html',{'title':'HomePage'})
 def About(request):
@@ -18,7 +20,7 @@ def Contact(request):
     return render(request,'Contact.html',{'title':'Contact Us'})
 @login_required
 def Admin(request):
-    return render(request,'Admin/Index.html',{'title':'Admin Homepage'})
+    return render(request,'Admin/Index.html',{'title':'Administrator Homepage| Management Console','name':'Dashboard'})
 def Logout(request):
     auth.logout(request)
     return redirect('index')
@@ -70,3 +72,18 @@ def Register(request):
                 return redirect('login')
     else:    
         return render(request,'Register.html',{'title':'Portal Registration'})
+def Sliders(request):
+    if request.method == 'POST':
+        form=SlidersForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.info(request,'Slider Successfully Added')
+            return redirect('Sliders')
+        else:
+            messages.info(request,'Slider Could Not be  Added')
+            return redirect('Sliders')
+        pass
+    else:
+        form=SlidersForm()
+        sliders=models.Sliders.objects.all()
+        return render(request,'Admin/Sliders.html',{'title':'Manage Sliders','name':'Sliders','form':form,'sliders':sliders})

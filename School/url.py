@@ -10,4 +10,5 @@ urlpatterns=[
     path('Register',views.Register,name='register'),
     path('Logout',views.Logout,name='logout'),
     path('LKDJHJFSDKJKSFJKS/JKJKSDJHJSD',views.Admin,name='admin'),
+    path('Sliders',views.Sliders,name='Sliders')
 ]
